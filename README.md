@@ -1,15 +1,9 @@
-# ToolVine Brand Site
+# ToolVine
 
-Static site. Two pages: brand guidelines at `/`, client requests at `/begin`.
+Brand site for ToolVine Mentors Initiative.
 
-## Run locally
+Two pages:
+- `/` for brand guidelines
+- `/begin` for client requests
 
-```bash
-python3 -m http.server 8080
-```
-
-Open `http://localhost:8080`.
-
-## Deploy
-
-Any static host. Push to GitHub, point Coolify at the repo.
+Prepared by BA CourtHouse.
