@@ -1,0 +1,25 @@
+Folder PATH listing
+Volume serial number is 0000004B 5037:8652
+C:.
+|   index.html
+|   public_structure.txt
+|   README.md
+|   script.js
+|   styles.css
+|   
++---begin
+|       index.html
+|       
+\---images
+        app-icon-1024.svg
+        favicon.svg
+        ig-post-1080.svg
+        log5.jpg
+        logo-horizontal-light.svg
+        logo-horizontal.svg
+        logo-stacked.svg
+        logomark-light.svg
+        logomark-mono.svg
+        logomark.svg
+        og-card-1200x630.svg
+        
