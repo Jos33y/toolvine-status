@@ -64,6 +64,9 @@ a { color: var(--ba-blue); text-decoration: none; }
 a:hover { color: var(--ba-blue-deep); }
 code { font-family: var(--font-mono); font-size: .92em; }
 
+/* Icon definitions only; every visible icon is a <use> reference. */
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
 
 /* ============ Scroll progress bar ============ */
 
@@ -233,6 +236,22 @@ code { font-family: var(--font-mono); font-size: .92em; }
 }
 
 
+/* ============ Relative time ============ */
+
+/* Appended by status.js when the stamp is within a week. Absent otherwise, so a
+   stale page falls back to the plain date rather than lying about freshness. */
+.rel {
+    display: block;
+    font-family: var(--font-mono);
+    font-weight: 400;
+    font-size: 11px;
+    color: var(--cool-gray);
+    letter-spacing: .2px;
+    margin-top: 2px;
+}
+.footer__meta-line .rel { display: inline; margin: 0 0 0 6px; color: rgba(255, 255, 255, .45); }
+
+
 /* ============ Quicklinks ============ */
 
 .quicklinks {
@@ -391,6 +410,11 @@ code { font-family: var(--font-mono); font-size: .92em; }
 .card--review { border-left: 3px solid var(--ba-orange); }
 .card--review:hover { border-color: var(--ba-orange); border-left-color: var(--ba-orange); }
 
+/* No public address to copy, so the head carries a tag where the button sits. */
+.card--auth { background: var(--paper); }
+.card--auth:hover { border-color: var(--ba-blue); }
+.card--auth .card__head { margin-bottom: 10px; }
+
 .card__head {
     display: flex; align-items: center; justify-content: space-between; gap: 10px;
     margin-bottom: 6px;
@@ -499,6 +523,10 @@ code { font-family: var(--font-mono); font-size: .92em; }
     line-height: 1.6;
 }
 .note strong { color: var(--dark-slate); font-weight: 600; }
+.note code {
+    background: var(--white); padding: 1px 6px; border-radius: 4px;
+    font-size: 12.5px; color: var(--dark-slate);
+}
 
 
 /* ============ Email table ============ */
@@ -602,7 +630,7 @@ code { font-family: var(--font-mono); font-size: .92em; }
     flex-shrink: 0;
     margin-top: 2px;
 }
-/* Stroke-draw the checkmark when the section enters view. */
+/* Stroke-draw the tick when the section enters view. */
 .check__icon circle {
     stroke-dasharray: 64;
     stroke-dashoffset: 64;
@@ -728,6 +756,7 @@ code { font-family: var(--font-mono); font-size: .92em; }
 .payment--paid .payment__num { color: var(--white); }
 .payment--paid::before { background: var(--ba-green); opacity: .4; }
 
+/* Kept for the milestone that becomes due once the client review completes. */
 .payment--due .payment__marker {
     background: var(--ba-orange);
     border-color: var(--ba-orange);
@@ -822,7 +851,12 @@ code { font-family: var(--font-mono); font-size: .92em; }
     border-radius: 999px;
     text-transform: uppercase;
     letter-spacing: .4px;
+    white-space: nowrap;
 }
+/* Three weights so eight asks do not all read as equally urgent. */
+.need__due--info { color: var(--ba-blue); background: var(--ba-blue-soft); }
+.need__due--soft { color: var(--cool-gray); background: var(--light-gray); }
+
 .need__text { font-size: 13px; color: var(--slate); line-height: 1.55; }
 
 
@@ -983,8 +1017,8 @@ code { font-family: var(--font-mono); font-size: .92em; }
 
 /* ============ Reveal animations (JS-enabled only) ============ */
 
-/* When JS is active, pre-reveal sections are hidden; .is-in-view brings them up.
-   Without JS, all content is visible by default (no .js class on <html>). */
+/* With JS active, pre-reveal sections are hidden and .is-in-view brings them up.
+   Without JS there is no .js class on <html>, so all content stays visible. */
 
 .js .reveal {
     opacity: 0;
@@ -1070,6 +1104,7 @@ button:focus-visible {
 @media print {
     body { background: var(--white); }
     .topbar, .quicklinks, .footer__bar, .toast, .scroll-progress { display: none; }
+    .card__copy, .email-copy { display: none; }
     .hero__stamp { width: 140px; animation: none; }
     .card, .check, .step, .need, .log__body, .payment__body, .next-card, .beyond__item {
         box-shadow: none;

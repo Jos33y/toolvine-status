@@ -1,4 +1,4 @@
-// Status page interactivity. Vanilla. No framework. Progressive enhancement.
+// Status page interactivity. Vanilla. Progressive enhancement only.
 
 (function () {
     'use strict'
@@ -20,8 +20,7 @@
     // ============ Copy to clipboard ============
 
     function setupCopyButtons() {
-        const buttons = document.querySelectorAll('.js-copy')
-        buttons.forEach((btn) => {
+        document.querySelectorAll('.js-copy').forEach((btn) => {
             btn.addEventListener('click', async (e) => {
                 e.preventDefault()
                 const url = btn.getAttribute('data-url')
@@ -60,18 +59,64 @@
     }
 
 
+    // ============ Relative timestamps ============
+
+    // Appends beside the printed date rather than replacing it. Past a week the
+    // relative form is dropped entirely, so an unmaintained page shows its real
+    // date instead of claiming to be fresh.
+
+    function setupRelativeTimes() {
+        const hosts = document.querySelectorAll('.js-relative')
+        if (!hosts.length) return
+        const now = new Date()
+
+        hosts.forEach((host) => {
+            const timeEl = host.matches('time') ? host : host.querySelector('time')
+            if (!timeEl) return
+            const iso = timeEl.getAttribute('datetime')
+            if (!iso) return
+            const then = new Date(iso)
+            if (Number.isNaN(then.getTime())) return
+
+            const rel = formatRelative(now, then)
+            if (!rel) return
+
+            const span = document.createElement('span')
+            span.className = 'rel'
+            span.textContent = rel
+            host.appendChild(span)
+        })
+    }
+
+    function formatRelative(now, then) {
+        const diffSec = Math.round((now - then) / 1000)
+        if (Math.abs(diffSec) < 60) return 'just now'
+        const minutes = Math.round(diffSec / 60)
+        if (Math.abs(minutes) < 60) return labelize(minutes, 'minute')
+        const hours = Math.round(diffSec / 3600)
+        if (Math.abs(hours) < 24) return labelize(hours, 'hour')
+        const days = Math.round(diffSec / 86400)
+        if (Math.abs(days) < 7) return labelize(days, 'day')
+        return null
+    }
+
+    function labelize(v, unit) {
+        const abs = Math.abs(v)
+        const plural = abs === 1 ? unit : unit + 's'
+        return v > 0 ? abs + ' ' + plural + ' ago' : 'in ' + abs + ' ' + plural
+    }
+
+
     // ============ Scroll-triggered reveals ============
 
-    // Each .reveal section fades up when it enters viewport. Inside the section,
-    // grid items cascade in with a small per-item delay so the eye is guided
-    // rather than overwhelmed.
+    // Each .reveal section fades up on entry. Inside it, grid items cascade with a
+    // small per-item delay so the eye is led rather than flooded.
 
     const CHILD_SELECTORS = '.card, .check, .step, .beyond__item, .next-card, .payment, .need, .log__entry, .quicklink, .email-row:not(.email-row--head)'
     const STAGGER_MS = 55
     const STAGGER_CAP_MS = 600
 
     function setupRevealObserver() {
-        // If IntersectionObserver is missing, fall back to showing everything.
         if (typeof IntersectionObserver === 'undefined') {
             document.querySelectorAll('.reveal').forEach((el) => el.classList.add('is-in-view'))
             document.querySelectorAll(CHILD_SELECTORS).forEach((el) => el.classList.add('is-in-view'))
@@ -84,12 +129,8 @@
                 const target = entry.target
                 target.classList.add('is-in-view')
 
-                // Cascade children
-                const items = target.querySelectorAll(CHILD_SELECTORS)
-                items.forEach((item, i) => {
-                    const delay = Math.min(i * STAGGER_MS, STAGGER_CAP_MS)
-                    item.style.transitionDelay = delay + 'ms'
-                    // Use requestAnimationFrame so the class lands on the next paint
+                target.querySelectorAll(CHILD_SELECTORS).forEach((item, i) => {
+                    item.style.transitionDelay = Math.min(i * STAGGER_MS, STAGGER_CAP_MS) + 'ms'
                     requestAnimationFrame(() => item.classList.add('is-in-view'))
                 })
 
@@ -114,8 +155,7 @@
         function update() {
             const doc = document.documentElement
             const max = doc.scrollHeight - doc.clientHeight
-            const pct = max > 0 ? (doc.scrollTop / max) * 100 : 0
-            bar.style.width = pct + '%'
+            bar.style.width = (max > 0 ? (doc.scrollTop / max) * 100 : 0) + '%'
             ticking = false
         }
         window.addEventListener('scroll', () => {
@@ -144,43 +184,10 @@
     }
 
 
-    // ============ Relative timestamps ============
-
-    function setupRelativeTimes() {
-        const nodes = document.querySelectorAll('.js-relative')
-        if (!nodes.length) return
-        const now = new Date()
-        nodes.forEach((node) => {
-            const iso = node.getAttribute('datetime')
-            if (!iso) return
-            const then = new Date(iso)
-            if (Number.isNaN(then.getTime())) return
-            const rel = formatRelative(now, then)
-            if (rel) {
-                if (!node.getAttribute('title')) node.setAttribute('title', node.textContent.trim())
-                node.textContent = rel
-            }
-        })
-    }
-
-    function formatRelative(now, then) {
-        const diffSec = Math.round((now - then) / 1000)
-        if (Math.abs(diffSec) < 60) return 'just now'
-        const minutes = Math.round(diffSec / 60)
-        if (Math.abs(minutes) < 60) return labelize(minutes, 'minute')
-        const hours = Math.round(diffSec / 3600)
-        if (Math.abs(hours) < 24) return labelize(hours, 'hour')
-        const days = Math.round(diffSec / 86400)
-        if (Math.abs(days) < 7) return labelize(days, 'day')
-        return null
-    }
-    function labelize(v, unit) {
-        const abs = Math.abs(v); const plural = abs === 1 ? unit : unit + 's'
-        return v > 0 ? abs + ' ' + plural + ' ago' : 'in ' + abs + ' ' + plural
-    }
-
-
     // ============ Anchor focus management ============
+
+    // Smooth scroll moves the viewport but not the reading position, so the target
+    // is focused once the scroll has settled.
 
     function setupAnchorFocus() {
         document.addEventListener('click', (e) => {

@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Status | ToolVine Mentoring Platform | BA CourtHouse</title>
+    <title>Project Status | Toolvine Mentoring Platform | BA CourtHouse</title>
     <meta name="description"
-        content="Live project status for the ToolVine Mentoring Platform. Phase 1 delivered. Verification surfaces, access walkthrough, and ongoing progress.">
+        content="Live project status for the Toolvine Mentoring Platform. Phases 1 to 3 complete. Verification surfaces, access walkthrough, and ongoing progress.">
     <meta name="robots" content="noindex">
 
-    <meta property="og:title" content="ToolVine Mentoring Platform · Project Status">
-    <meta property="og:description" content="Phase 1 delivered. Verification surfaces and ongoing progress, live.">
+    <meta property="og:title" content="Toolvine Mentoring Platform, project status">
+    <meta property="og:description" content="Phases 1 to 3 complete. The mentoring engine is built and in testing.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://status.toolvinementors.com/">
 
@@ -23,14 +23,56 @@
     <link rel="stylesheet" href="status.css">
 
     <script>
-        // Flip progressive-enhancement marker before paint so reveal CSS only
-        // applies when JS is active; without JS the content remains visible.
+        // Flip the progressive-enhancement marker before paint so reveal CSS only
+        // applies when JS is active. Without JS the content stays visible.
         document.documentElement.classList.remove('no-js');
         document.documentElement.classList.add('js');
     </script>
 </head>
 
 <body>
+
+    <!-- ============ Icon sprite ============ -->
+    <svg class="sprite" aria-hidden="true" focusable="false">
+        <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" />
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+        </symbol>
+        <symbol id="i-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17 17 7" />
+            <path d="M7 7h10v10" />
+        </symbol>
+        <symbol id="i-tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <path d="m8 12 3 3 5-6" />
+        </symbol>
+        <symbol id="i-paid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="m5 12 5 5L20 7" />
+        </symbol>
+        <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z" />
+            <circle cx="12" cy="12" r="3" />
+        </symbol>
+        <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="11" width="14" height="10" rx="2" />
+            <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+        </symbol>
+        <symbol id="i-next" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="m9 6 6 6-6 6" />
+        </symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-12V5l-8-3-8 3v5c0 8 8 12 8 12Z" />
+            <path d="m9 12 2 2 4-4" />
+        </symbol>
+    </svg>
 
     <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
@@ -45,11 +87,9 @@
             <div class="topbar__project">
                 <span class="topbar__project-label">Project</span>
                 <a class="topbar__project-name" href="https://toolvinementors.com" target="_blank" rel="noopener">
-                    ToolVine Mentoring Platform
-                    <svg class="topbar__project-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M7 17 17 7" />
-                        <path d="M7 7h10v10" />
+                    Toolvine Mentoring Platform
+                    <svg class="topbar__project-arrow" aria-hidden="true">
+                        <use href="#i-out" />
                     </svg>
                 </a>
             </div>
@@ -65,28 +105,31 @@
                 <div class="hero__content">
                     <div class="hero__eyebrow">
                         <span class="pulse"><span class="pulse__dot"></span><span class="pulse__ring"></span></span>
-                        <span class="hero__eyebrow-text">Live status &middot; ToolVine Mentoring Platform</span>
+                        <span class="hero__eyebrow-text">Live status &middot; Toolvine Mentoring Platform</span>
                     </div>
-                    <h1 id="hero-title" class="hero__title">Phase 1 Delivered.</h1>
-                    <p class="hero__lede">Foundation, marketing site, authentication, onboarding, and the admin console
-                        are live. The mentoring engine is the next build. This page updates as work ships.</p>
+                    <h1 id="hero-title" class="hero__title">The mentoring engine is built.</h1>
+                    <p class="hero__lede">Mentors and mentees can now be invited, paired, and scheduled. Meetings carry
+                        notes and action items, and every party is emailed when something moves. The resource library is
+                        the last piece of build work before testing and launch.</p>
 
                     <div class="hero__meta">
                         <div class="hero__meta-cell">
                             <div class="hero__meta-label">Project</div>
-                            <div class="hero__meta-value">ToolVine Mentors Initiative</div>
+                            <div class="hero__meta-value">Toolvine Mentors and Leaders Initiative</div>
                         </div>
                         <div class="hero__meta-cell">
                             <div class="hero__meta-label">Phase</div>
-                            <div class="hero__meta-value">Phase 2 in progress</div>
+                            <div class="hero__meta-value">3 of 5 complete</div>
                         </div>
                         <div class="hero__meta-cell">
                             <div class="hero__meta-label">Status</div>
-                            <div class="hero__meta-value hero__meta-value--green">Operational</div>
+                            <div class="hero__meta-value hero__meta-value--green">Operational, in testing</div>
                         </div>
                         <div class="hero__meta-cell">
                             <div class="hero__meta-label">Updated</div>
-                            <div class="hero__meta-value"><time>16 June 2026</time></div>
+                            <div class="hero__meta-value js-relative">
+                                <time datetime="2026-08-13T18:00:00+01:00">13 August 2026</time>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -98,250 +141,269 @@
 
             <nav class="quicklinks reveal" aria-label="Quick navigation">
                 <a class="quicklink" href="#verify">
-                    <svg class="quicklink__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z" />
-                        <circle cx="12" cy="12" r="3" />
+                    <svg class="quicklink__icon" aria-hidden="true">
+                        <use href="#i-eye" />
                     </svg>
                     <div class="quicklink__body">
-                        <div class="quicklink__title">Review the site</div>
-                        <div class="quicklink__sub">Marketing, legal, every public page</div>
+                        <div class="quicklink__title">Review the platform</div>
+                        <div class="quicklink__sub">Every page, public and members only</div>
                     </div>
                 </a>
                 <a class="quicklink" href="#access">
-                    <svg class="quicklink__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <rect x="5" y="11" width="14" height="10" rx="2" />
-                        <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+                    <svg class="quicklink__icon" aria-hidden="true">
+                        <use href="#i-lock" />
                     </svg>
                     <div class="quicklink__body">
-                        <div class="quicklink__title">Access the platform</div>
-                        <div class="quicklink__sub">Zoho mail and admin sign-in walkthrough</div>
+                        <div class="quicklink__title">Sign in as administrator</div>
+                        <div class="quicklink__sub">Zoho mail and the password reset path</div>
                     </div>
                 </a>
-                <a class="quicklink" href="#whats-next">
-                    <svg class="quicklink__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="m9 6 6 6-6 6" />
+                <a class="quicklink" href="#remaining">
+                    <svg class="quicklink__icon" aria-hidden="true">
+                        <use href="#i-next" />
                     </svg>
                     <div class="quicklink__body">
-                        <div class="quicklink__title">What's next</div>
-                        <div class="quicklink__sub">The mentoring engine</div>
+                        <div class="quicklink__title">What remains</div>
+                        <div class="quicklink__sub">The resource library, testing, launch</div>
                     </div>
                 </a>
             </nav>
         </section>
 
 
-        <!-- ============ Section: Verification surfaces ============ -->
+        <!-- ============ 01 Live now ============ -->
         <section class="section reveal" id="verify" aria-labelledby="verify-title">
             <div class="section__head">
                 <span class="section__eyebrow">01 &middot; Live now</span>
                 <h2 class="section__title" id="verify-title">Pages you can open and test today</h2>
-                <p class="section__lede">Every URL below is live. Click to open in a new tab. Click the copy icon to
-                    grab the link.</p>
+                <p class="section__lede">Every address below is live. Open one in a new tab, or use the copy control to
+                    take the link with you.</p>
             </div>
 
-            <h3 class="subgroup__title">Marketing</h3>
+            <h3 class="subgroup__title">Public site, ten pages</h3>
             <div class="cards">
                 <article class="card">
                     <div class="card__head">
-                        <div class="card__name">Home</div><button class="card__copy js-copy"
-                            data-url="https://toolvinementors.com/" aria-label="Copy Home URL"><svg viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="9" y="9" width="13" height="13" rx="2" />
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                            </svg></button>
+                        <div class="card__name">Home</div>
+                        <button class="card__copy js-copy" data-url="https://toolvinementors.com/"
+                            aria-label="Copy the Home address"><svg aria-hidden="true">
+                                <use href="#i-copy" /></svg></button>
                     </div>
                     <div class="card__url"><a href="https://toolvinementors.com/" target="_blank"
                             rel="noopener">toolvinementors.com</a></div>
                     <p class="card__desc">Conviction hero, scripture anchor, community section, two-paths interactive,
-                        wall of witness, cinematic close.</p>
+                        wall of witness, closing invitation.</p>
                 </article>
                 <article class="card">
                     <div class="card__head">
-                        <div class="card__name">About</div><button class="card__copy js-copy"
-                            data-url="https://toolvinementors.com/about" aria-label="Copy About URL"><svg
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="9" y="9" width="13" height="13" rx="2" />
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                            </svg></button>
+                        <div class="card__name">About</div>
+                        <button class="card__copy js-copy" data-url="https://toolvinementors.com/about"
+                            aria-label="Copy the About address"><svg aria-hidden="true">
+                                <use href="#i-copy" /></svg></button>
                     </div>
                     <div class="card__url"><a href="https://toolvinementors.com/about" target="_blank"
                             rel="noopener">toolvinementors.com/about</a></div>
-                    <p class="card__desc">Conviction-first hero, voices from Vinethoughts, founder, publication, team
-                        masthead, Family Meeting invitation.</p>
+                    <p class="card__desc">Mission and vision, voices from Vinethoughts, the founder, the publication,
+                        team masthead, Family Meeting invitation.</p>
                 </article>
                 <article class="card">
                     <div class="card__head">
-                        <div class="card__name">Programs</div><button class="card__copy js-copy"
-                            data-url="https://toolvinementors.com/programs" aria-label="Copy Programs URL"><svg
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="9" y="9" width="13" height="13" rx="2" />
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                            </svg></button>
+                        <div class="card__name">Programs</div>
+                        <button class="card__copy js-copy" data-url="https://toolvinementors.com/programs"
+                            aria-label="Copy the Programs address"><svg aria-hidden="true">
+                                <use href="#i-copy" /></svg></button>
                     </div>
                     <div class="card__url"><a href="https://toolvinementors.com/programs" target="_blank"
                             rel="noopener">toolvinementors.com/programs</a></div>
-                    <p class="card__desc">Six streams as a typographic dossier on dark teal, cadence section, asymmetric
-                        commitments.</p>
+                    <p class="card__desc">The four programs you run, each with its cadence and audience, followed by the
+                        twelve-week arc and the promises both sides make.</p>
                 </article>
                 <article class="card">
                     <div class="card__head">
-                        <div class="card__name">How it Works</div><button class="card__copy js-copy"
-                            data-url="https://toolvinementors.com/how-it-works" aria-label="Copy How it Works URL"><svg
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="9" y="9" width="13" height="13" rx="2" />
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                            </svg></button>
+                        <div class="card__name">How it works</div>
+                        <button class="card__copy js-copy" data-url="https://toolvinementors.com/how-it-works"
+                            aria-label="Copy the How it works address"><svg aria-hidden="true">
+                                <use href="#i-copy" /></svg></button>
                     </div>
                     <div class="card__url"><a href="https://toolvinementors.com/how-it-works" target="_blank"
                             rel="noopener">toolvinementors.com/how-it-works</a></div>
-                    <p class="card__desc">Cold-conversion landing with value props, numbered process on dark teal, and a
-                        sticky FAQ.</p>
+                    <p class="card__desc">The path from signing up to being paired, a numbered process on dark teal, and
+                        a sticky question and answer rail.</p>
                 </article>
                 <article class="card">
                     <div class="card__head">
-                        <div class="card__name">Resources</div><button class="card__copy js-copy"
-                            data-url="https://toolvinementors.com/resources" aria-label="Copy Resources URL"><svg
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="9" y="9" width="13" height="13" rx="2" />
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                            </svg></button>
+                        <div class="card__name">Resources</div>
+                        <button class="card__copy js-copy" data-url="https://toolvinementors.com/resources"
+                            aria-label="Copy the Resources address"><svg aria-hidden="true">
+                                <use href="#i-copy" /></svg></button>
                     </div>
                     <div class="card__url"><a href="https://toolvinementors.com/resources" target="_blank"
                             rel="noopener">toolvinementors.com/resources</a></div>
-                    <p class="card__desc">Featured publication, six category cards, social proof, dark CTA.</p>
+                    <p class="card__desc">Featured publication, the six library categories, and the invitation to join.
+                        The library itself fills once uploads begin.</p>
                 </article>
                 <article class="card">
                     <div class="card__head">
-                        <div class="card__name">Contact</div><button class="card__copy js-copy"
-                            data-url="https://toolvinementors.com/contact" aria-label="Copy Contact URL"><svg
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="9" y="9" width="13" height="13" rx="2" />
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                            </svg></button>
+                        <div class="card__name">Team</div>
+                        <button class="card__copy js-copy" data-url="https://toolvinementors.com/team"
+                            aria-label="Copy the Team address"><svg aria-hidden="true">
+                                <use href="#i-copy" /></svg></button>
+                    </div>
+                    <div class="card__url"><a href="https://toolvinementors.com/team" target="_blank"
+                            rel="noopener">toolvinementors.com/team</a></div>
+                    <p class="card__desc">The founder, the board of five, six team leads, administration, and the mentor
+                        roster. People who serve twice appear once.</p>
+                </article>
+                <article class="card">
+                    <div class="card__head">
+                        <div class="card__name">Outreach</div>
+                        <button class="card__copy js-copy" data-url="https://toolvinementors.com/outreach"
+                            aria-label="Copy the Outreach address"><svg aria-hidden="true">
+                                <use href="#i-copy" /></svg></button>
+                    </div>
+                    <div class="card__url"><a href="https://toolvinementors.com/outreach" target="_blank"
+                            rel="noopener">toolvinementors.com/outreach</a></div>
+                    <p class="card__desc">Bales of Mercy and Divine Offspring, told with your own photographs rather
+                        than stock imagery.</p>
+                </article>
+                <article class="card">
+                    <div class="card__head">
+                        <div class="card__name">Partners</div>
+                        <button class="card__copy js-copy" data-url="https://toolvinementors.com/partners"
+                            aria-label="Copy the Partners address"><svg aria-hidden="true">
+                                <use href="#i-copy" /></svg></button>
+                    </div>
+                    <div class="card__url"><a href="https://toolvinementors.com/partners" target="_blank"
+                            rel="noopener">toolvinementors.com/partners</a></div>
+                    <p class="card__desc">Organisations standing with Toolvine, managed from the admin console. Two
+                        sample rows are in place until you send the real list.</p>
+                </article>
+                <article class="card">
+                    <div class="card__head">
+                        <div class="card__name">Get involved</div>
+                        <button class="card__copy js-copy" data-url="https://toolvinementors.com/get-involved"
+                            aria-label="Copy the Get involved address"><svg aria-hidden="true">
+                                <use href="#i-copy" /></svg></button>
+                    </div>
+                    <div class="card__url"><a href="https://toolvinementors.com/get-involved" target="_blank"
+                            rel="noopener">toolvinementors.com/get-involved</a></div>
+                    <p class="card__desc">Four ways in: mentor, be mentored, partner, or donate. Every submission lands
+                        in the admin console with a status you can work through.</p>
+                </article>
+                <article class="card">
+                    <div class="card__head">
+                        <div class="card__name">Contact</div>
+                        <button class="card__copy js-copy" data-url="https://toolvinementors.com/contact"
+                            aria-label="Copy the Contact address"><svg aria-hidden="true">
+                                <use href="#i-copy" /></svg></button>
                     </div>
                     <div class="card__url"><a href="https://toolvinementors.com/contact" target="_blank"
                             rel="noopener">toolvinementors.com/contact</a></div>
-                    <p class="card__desc">Floating-label form with subject pills, magnetic send button, rail of direct
-                        lines and socials.</p>
+                    <p class="card__desc">A form that files itself into the admin console, beside your direct lines and
+                        social accounts.</p>
+                </article>
+            </div>
+
+            <h3 class="subgroup__title">Members area</h3>
+            <p class="subgroup__lede">These need a sign-in. Section 02 walks you through getting into the administrator
+                account, after which all four are reachable from the sidebar.</p>
+            <div class="cards">
+                <article class="card card--auth">
+                    <div class="card__head">
+                        <div class="card__name">Dashboard</div>
+                        <span class="tag tag--alias">Sign-in required</span>
+                    </div>
+                    <p class="card__desc">Different for each role. An administrator sees platform counts, pending
+                        actions, recent activity, and site insights. A mentor sees their mentees and their next
+                        sessions. A mentee sees their mentor and what has been asked of them.</p>
+                </article>
+                <article class="card card--auth">
+                    <div class="card__head">
+                        <div class="card__name">Meetings</div>
+                        <span class="tag tag--alias">Sign-in required</span>
+                    </div>
+                    <p class="card__desc">Upcoming, past, and cancelled. Schedule, move, cancel, or mark a session
+                        complete. Open one to see the record: who, when, where, the notes, and the follow-ups.</p>
+                </article>
+                <article class="card card--auth">
+                    <div class="card__head">
+                        <div class="card__name">Pairings</div>
+                        <span class="tag tag--alias">Administrator</span>
+                    </div>
+                    <p class="card__desc">Assign a mentor to a mentee, move a mentee to a different mentor, or end a
+                        pairing. Nothing is deleted, so every past relationship stays on the record.</p>
+                </article>
+                <article class="card card--auth">
+                    <div class="card__head">
+                        <div class="card__name">Invitations</div>
+                        <span class="tag tag--alias">Administrator</span>
+                    </div>
+                    <p class="card__desc">Send someone a personal link. They sign up without proving their email again,
+                        and arrive already holding the role you intended. Paste a whole list at once when you are ready
+                        to open the doors.</p>
                 </article>
             </div>
 
             <h3 class="subgroup__title subgroup__title--review">For your review and sign-off</h3>
             <div class="review-banner">
-                <svg class="review-banner__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M12 22s8-4 8-12V5l-8-3-8 3v5c0 8 8 12 8 12Z" />
-                    <path d="m9 12 2 2 4-4" />
+                <svg class="review-banner__icon" aria-hidden="true">
+                    <use href="#i-shield" />
                 </svg>
                 <div class="review-banner__text">
-                    <strong>Drafted by BA CourtHouse, awaiting your approval by 30 June.</strong> Read through, tell us
-                    what to change, and we adjust.
+                    <strong>Drafted by BA CourtHouse, still awaiting your approval.</strong> One point needs a decision
+                    from your side: the Terms name the courts of Lagos State, while the initiative is headquartered in
+                    Ibadan, Oyo State. Tell us which is correct and we change it.
                 </div>
             </div>
             <div class="cards">
                 <article class="card card--review">
                     <div class="card__head">
-                        <div class="card__name">Privacy Policy</div><button class="card__copy js-copy"
-                            data-url="https://toolvinementors.com/privacy" aria-label="Copy Privacy URL"><svg
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="9" y="9" width="13" height="13" rx="2" />
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                            </svg></button>
+                        <div class="card__name">Privacy policy</div>
+                        <button class="card__copy js-copy" data-url="https://toolvinementors.com/privacy"
+                            aria-label="Copy the Privacy address"><svg aria-hidden="true">
+                                <use href="#i-copy" /></svg></button>
                     </div>
                     <div class="card__url"><a href="https://toolvinementors.com/privacy" target="_blank"
                             rel="noopener">toolvinementors.com/privacy</a></div>
-                    <p class="card__desc">13 sections covering NDPA and GDPR. Data controller, processor relationship,
-                        retention, your rights.</p>
+                    <p class="card__desc">Thirteen sections covering the NDPA and the GDPR. Who holds the data,
+                        retention, and the rights of every member.</p>
                 </article>
                 <article class="card card--review">
                     <div class="card__head">
-                        <div class="card__name">Terms of Use</div><button class="card__copy js-copy"
-                            data-url="https://toolvinementors.com/terms" aria-label="Copy Terms URL"><svg
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="9" y="9" width="13" height="13" rx="2" />
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                            </svg></button>
+                        <div class="card__name">Terms of use</div>
+                        <button class="card__copy js-copy" data-url="https://toolvinementors.com/terms"
+                            aria-label="Copy the Terms address"><svg aria-hidden="true">
+                                <use href="#i-copy" /></svg></button>
                     </div>
                     <div class="card__url"><a href="https://toolvinementors.com/terms" target="_blank"
                             rel="noopener">toolvinementors.com/terms</a></div>
-                    <p class="card__desc">13 sections covering platform use, account responsibilities, content,
-                        termination, jurisdiction.</p>
+                    <p class="card__desc">Thirteen sections covering platform use, account responsibilities, content,
+                        termination, and jurisdiction.</p>
                 </article>
                 <article class="card card--review">
                     <div class="card__head">
-                        <div class="card__name">Community Guidelines</div><button class="card__copy js-copy"
-                            data-url="https://toolvinementors.com/community-guidelines"
-                            aria-label="Copy Community Guidelines URL"><svg viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="9" y="9" width="13" height="13" rx="2" />
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                            </svg></button>
+                        <div class="card__name">Community guidelines</div>
+                        <button class="card__copy js-copy" data-url="https://toolvinementors.com/community-guidelines"
+                            aria-label="Copy the Community guidelines address"><svg aria-hidden="true">
+                                <use href="#i-copy" /></svg></button>
                     </div>
                     <div class="card__url"><a href="https://toolvinementors.com/community-guidelines" target="_blank"
                             rel="noopener">toolvinementors.com/community-guidelines</a></div>
-                    <p class="card__desc">8 sections covering safeguarding, mentor and mentee dynamics, financial and
-                        romantic boundaries.</p>
-                </article>
-            </div>
-
-            <h3 class="subgroup__title">Authentication flow</h3>
-            <p class="subgroup__lede">Sign up with your own email so you experience the full path: account creation,
-                email verification, onboarding pack, and the role-decision flow.</p>
-            <div class="cards">
-                <article class="card">
-                    <div class="card__head">
-                        <div class="card__name">Get started</div><button class="card__copy js-copy"
-                            data-url="https://toolvinementors.com/auth/sign-up" aria-label="Copy sign up URL"><svg
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="9" y="9" width="13" height="13" rx="2" />
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                            </svg></button>
-                    </div>
-                    <div class="card__url"><a href="https://toolvinementors.com/auth/sign-up" target="_blank"
-                            rel="noopener">toolvinementors.com/auth/sign-up</a></div>
-                    <p class="card__desc">Create an account as mentor, mentee, or undecided. Email verification follows
-                        immediately.</p>
-                </article>
-                <article class="card">
-                    <div class="card__head">
-                        <div class="card__name">Sign in</div><button class="card__copy js-copy"
-                            data-url="https://toolvinementors.com/auth/sign-in" aria-label="Copy sign in URL"><svg
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="9" y="9" width="13" height="13" rx="2" />
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                            </svg></button>
-                    </div>
-                    <div class="card__url"><a href="https://toolvinementors.com/auth/sign-in" target="_blank"
-                            rel="noopener">toolvinementors.com/auth/sign-in</a></div>
-                    <p class="card__desc">Sign in with password or request a magic link. Includes the password reset
-                        flow used for the admin account.</p>
+                    <p class="card__desc">Eight sections covering safeguarding, the mentor and mentee dynamic, and
+                        financial and romantic boundaries.</p>
                 </article>
             </div>
         </section>
 
 
-        <!-- ============ Section: Access the platform ============ -->
+        <!-- ============ 02 Access ============ -->
         <section class="section section--alt reveal" id="access" aria-labelledby="access-title">
             <div class="section__head">
                 <span class="section__eyebrow">02 &middot; Access</span>
                 <h2 class="section__title" id="access-title">Signing in as administrator</h2>
-                <p class="section__lede">The admin account <code>admin@toolvinementors.com</code> is created and active
-                    on the platform. Vincent will share the Zoho mailbox credentials directly. Once you can read mail at
-                    that address, the platform sign-in is a single password reset.</p>
+                <p class="section__lede">The account <code>admin@toolvinementors.com</code> is created and active.
+                    Vincent shares the Zoho mailbox credentials directly. Once you can read mail at that address, the
+                    platform sign-in is a single password reset.</p>
             </div>
 
             <ol class="steps">
@@ -349,15 +411,13 @@
                     <div class="step__num">1</div>
                     <div class="step__body">
                         <div class="step__title">Open the Zoho mailbox</div>
-                        <p class="step__text">The credentials will be sent to the founder's Gmail address. Sign in to
-                            Zoho Mail and you will be prompted to set your own password on first login.</p>
+                        <p class="step__text">The credentials go to the founder's Gmail address. Sign in to Zoho Mail
+                            and you are prompted to set your own password on first login.</p>
                         <a class="step__action" href="https://www.zoho.com/mail/login.html" target="_blank"
                             rel="noopener">
                             Open Zoho Mail
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
-                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M7 17 17 7" />
-                                <path d="M7 7h10v10" />
+                            <svg aria-hidden="true">
+                                <use href="#i-out" />
                             </svg>
                         </a>
                     </div>
@@ -365,16 +425,14 @@
                 <li class="step">
                     <div class="step__num">2</div>
                     <div class="step__body">
-                        <div class="step__title">Go to ToolVine sign-in</div>
-                        <p class="step__text">Open the ToolVine sign-in page and choose "Forgot your password" below the
-                            form.</p>
+                        <div class="step__title">Go to the Toolvine sign-in</div>
+                        <p class="step__text">Open the sign-in page and choose "Forgot your password" below the form.
+                        </p>
                         <a class="step__action" href="https://toolvinementors.com/auth/sign-in" target="_blank"
                             rel="noopener">
-                            Open ToolVine sign-in
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
-                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M7 17 17 7" />
-                                <path d="M7 7h10v10" />
+                            Open Toolvine sign-in
+                            <svg aria-hidden="true">
+                                <use href="#i-out" />
                             </svg>
                         </a>
                     </div>
@@ -383,35 +441,35 @@
                     <div class="step__num">3</div>
                     <div class="step__body">
                         <div class="step__title">Enter <code>admin@toolvinementors.com</code></div>
-                        <p class="step__text">Submit the form. A password reset link is sent to that address, which
-                            lands in the Zoho inbox you just opened.</p>
+                        <p class="step__text">Submit the form. A reset link is sent to that address, and it lands in the
+                            Zoho inbox you just opened.</p>
                     </div>
                 </li>
                 <li class="step">
                     <div class="step__num">4</div>
                     <div class="step__body">
-                        <div class="step__title">Open the reset link, set your password</div>
-                        <p class="step__text">Click the link in the Zoho email, choose a new password, sign in. You land
-                            on the admin dashboard with full access.</p>
+                        <div class="step__title">Open the link, set your password</div>
+                        <p class="step__text">Choose a new password and sign in. You land on the administrator
+                            dashboard with full access to every surface in section 01.</p>
                     </div>
                 </li>
             </ol>
 
             <div class="note">
-                <strong>Why no password by email.</strong> Plaintext passwords sent over email are a soft security
-                boundary. Sending you through the reset flow proves the platform's email pipeline works, gives you the
-                credential you own from day one, and is the same path your members will use.
+                <strong>Why we do not email you a password.</strong> A plaintext password sent over email is a weak
+                boundary. Sending you through the reset flow proves the platform's email pipeline works, gives you a
+                credential nobody else has ever seen, and is the same path every member of your community will use.
             </div>
         </section>
 
 
-        <!-- ============ Section: Email infrastructure ============ -->
+        <!-- ============ 03 Email ============ -->
         <section class="section reveal" id="email" aria-labelledby="email-title">
             <div class="section__head">
                 <span class="section__eyebrow">03 &middot; Email</span>
                 <h2 class="section__title" id="email-title">Email infrastructure</h2>
-                <p class="section__lede">Five branded addresses live on Zoho Mail. Four of them are aliases that route
-                    into the primary inbox so you only check one place.</p>
+                <p class="section__lede">Five branded addresses live on Zoho Mail. Four are aliases routing into the
+                    primary inbox, so there is only one place to check.</p>
             </div>
 
             <div class="email-table">
@@ -422,257 +480,347 @@
                 </div>
                 <div class="email-row">
                     <div class="email-addr"><code>admin@toolvinementors.com</code><button class="email-copy js-copy"
-                            data-url="admin@toolvinementors.com" aria-label="Copy admin email"><svg viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="9" y="9" width="13" height="13" rx="2" />
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                            </svg></button></div>
-                    <div>Primary admin inbox, root mailbox</div>
+                            data-url="admin@toolvinementors.com" aria-label="Copy the admin address"><svg
+                                aria-hidden="true">
+                                <use href="#i-copy" /></svg></button></div>
+                    <div>Primary administrator inbox, root mailbox</div>
                     <div><span class="tag tag--primary">Primary</span></div>
                 </div>
                 <div class="email-row">
                     <div class="email-addr"><code>hello@toolvinementors.com</code><button class="email-copy js-copy"
-                            data-url="hello@toolvinementors.com" aria-label="Copy hello email"><svg viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="9" y="9" width="13" height="13" rx="2" />
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                            </svg></button></div>
-                    <div>General community contact</div>
+                            data-url="hello@toolvinementors.com" aria-label="Copy the hello address"><svg
+                                aria-hidden="true">
+                                <use href="#i-copy" /></svg></button></div>
+                    <div>General community contact, and where replies to platform email arrive</div>
                     <div><span class="tag tag--alias">Forwards to admin</span></div>
                 </div>
                 <div class="email-row">
                     <div class="email-addr"><code>privacy@toolvinementors.com</code><button class="email-copy js-copy"
-                            data-url="privacy@toolvinementors.com" aria-label="Copy privacy email"><svg
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="9" y="9" width="13" height="13" rx="2" />
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                            </svg></button></div>
+                            data-url="privacy@toolvinementors.com" aria-label="Copy the privacy address"><svg
+                                aria-hidden="true">
+                                <use href="#i-copy" /></svg></button></div>
                     <div>Privacy requests, data access, deletion</div>
                     <div><span class="tag tag--alias">Forwards to admin</span></div>
                 </div>
                 <div class="email-row">
                     <div class="email-addr"><code>safeguarding@toolvinementors.com</code><button
                             class="email-copy js-copy" data-url="safeguarding@toolvinementors.com"
-                            aria-label="Copy safeguarding email"><svg viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="9" y="9" width="13" height="13" rx="2" />
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                            </svg></button></div>
-                    <div>Safeguarding concerns, mentor-mentee reports</div>
+                            aria-label="Copy the safeguarding address"><svg aria-hidden="true">
+                                <use href="#i-copy" /></svg></button></div>
+                    <div>Safeguarding concerns, mentor and mentee reports</div>
                     <div><span class="tag tag--alias">Forwards to admin</span></div>
                 </div>
                 <div class="email-row">
                     <div class="email-addr"><code>support@toolvinementors.com</code><button class="email-copy js-copy"
-                            data-url="support@toolvinementors.com" aria-label="Copy support email"><svg
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="9" y="9" width="13" height="13" rx="2" />
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                            </svg></button></div>
-                    <div>User support, technical questions</div>
+                            data-url="support@toolvinementors.com" aria-label="Copy the support address"><svg
+                                aria-hidden="true">
+                                <use href="#i-copy" /></svg></button></div>
+                    <div>Member support, technical questions</div>
                     <div><span class="tag tag--alias">Forwards to admin</span></div>
                 </div>
                 <div class="email-row email-row--system">
                     <div class="email-addr"><code>notify@relay.toolvinementors.com</code><button
                             class="email-copy js-copy" data-url="notify@relay.toolvinementors.com"
-                            aria-label="Copy notify email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="9" y="9" width="13" height="13" rx="2" />
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                            </svg></button></div>
-                    <div>Transactional sender (welcome, verify, password reset, role decisions)</div>
-                    <div><span class="tag tag--system">Resend, send-only</span></div>
+                            aria-label="Copy the notification sender address"><svg aria-hidden="true">
+                                <use href="#i-copy" /></svg></button></div>
+                    <div>Sends welcome, verification, invitation, role decision, pairing, and meeting email</div>
+                    <div><span class="tag tag--system">Sends only</span></div>
                 </div>
+            </div>
+
+            <div class="note">
+                <strong>Replies now land somewhere.</strong> Platform email is sent from a dedicated subdomain that
+                cannot receive mail, which is normal practice and keeps your main domain's reputation clean. Every
+                message now carries <code>hello@toolvinementors.com</code> as its reply address, so a mentee who answers
+                a meeting notification reaches your inbox rather than a bounce.
             </div>
         </section>
 
 
-        <!-- ============ Section: Phase 1 deliverables ============ -->
-        <section class="section reveal" id="phase1" aria-labelledby="phase1-title">
+        <!-- ============ 04 Delivered ============ -->
+        <section class="section reveal" id="delivered" aria-labelledby="delivered-title">
             <div class="section__head">
                 <span class="section__eyebrow">04 &middot; Delivered</span>
-                <h2 class="section__title" id="phase1-title">Phase 1 deliverables</h2>
-                <p class="section__lede">The eight foundation items committed for Weeks 1 and 2 per the Project
-                    Timeline.</p>
+                <h2 class="section__title" id="delivered-title">Phases one to three, complete</h2>
+                <p class="section__lede">Every line below is quoted from the timeline agreed in the Statement of Work,
+                    ticked against what is now live on the platform.</p>
             </div>
 
+            <h3 class="subgroup__title">Phase 1, foundation and setup</h3>
             <div class="checklist">
                 <div class="check">
-                    <svg class="check__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="m8 12 3 3 5-6" />
+                    <svg class="check__icon" aria-hidden="true">
+                        <use href="#i-tick" />
                     </svg>
                     <div class="check__body">
                         <div class="check__title">Domain registration</div>
-                        <div class="check__sub">toolvinementors.com, DNS live, SSL active</div>
+                        <div class="check__sub">toolvinementors.com, DNS live, certificate active</div>
                     </div>
                 </div>
                 <div class="check">
-                    <svg class="check__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="m8 12 3 3 5-6" />
+                    <svg class="check__icon" aria-hidden="true">
+                        <use href="#i-tick" />
                     </svg>
                     <div class="check__body">
-                        <div class="check__title">Hosting</div>
-                        <div class="check__sub">Vercel production, GitHub-connected, automatic deploys</div>
+                        <div class="check__title">Hosting setup</div>
+                        <div class="check__sub">Vercel production, connected to the repository, deploys on every change
+                        </div>
                     </div>
                 </div>
                 <div class="check">
-                    <svg class="check__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="m8 12 3 3 5-6" />
+                    <svg class="check__icon" aria-hidden="true">
+                        <use href="#i-tick" />
                     </svg>
                     <div class="check__body">
-                        <div class="check__title">Email infrastructure</div>
-                        <div class="check__sub">Zoho mailbox, five aliases, Resend transactional with SPF and DKIM
-                            verified</div>
+                        <div class="check__title">Email infrastructure setup</div>
+                        <div class="check__sub">Zoho mailbox, four aliases, and a verified transactional sender</div>
                     </div>
                 </div>
                 <div class="check">
-                    <svg class="check__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="m8 12 3 3 5-6" />
+                    <svg class="check__icon" aria-hidden="true">
+                        <use href="#i-tick" />
                     </svg>
                     <div class="check__body">
                         <div class="check__title">Development environment</div>
-                        <div class="check__sub">Repository, environment management, continuous integration</div>
+                        <div class="check__sub">Repository, environment management, preview builds on every branch</div>
                     </div>
                 </div>
                 <div class="check">
-                    <svg class="check__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="m8 12 3 3 5-6" />
+                    <svg class="check__icon" aria-hidden="true">
+                        <use href="#i-tick" />
                     </svg>
                     <div class="check__body">
-                        <div class="check__title">Supabase database</div>
-                        <div class="check__sub">Provisioned, 20+ migrations applied, row-level security tested across
-                            roles</div>
+                        <div class="check__title">Database provisioning</div>
+                        <div class="check__sub">Thirty database revisions applied, with access rules tested per role
+                        </div>
                     </div>
                 </div>
                 <div class="check">
-                    <svg class="check__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="m8 12 3 3 5-6" />
+                    <svg class="check__icon" aria-hidden="true">
+                        <use href="#i-tick" />
                     </svg>
                     <div class="check__body">
-                        <div class="check__title">Authentication</div>
-                        <div class="check__sub">Sign in, sign up, password reset, magic link, custom branded email
-                            verification</div>
+                        <div class="check__title">Authentication setup</div>
+                        <div class="check__sub">Sign in, sign up, password reset, sign-in links, and branded
+                            confirmation email</div>
                     </div>
                 </div>
                 <div class="check">
-                    <svg class="check__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="m8 12 3 3 5-6" />
+                    <svg class="check__icon" aria-hidden="true">
+                        <use href="#i-tick" />
                     </svg>
                     <div class="check__body">
-                        <div class="check__title">Design system</div>
-                        <div class="check__sub">Brand tokens, typography, shared components, two-canvas system</div>
+                        <div class="check__title">Design system implementation</div>
+                        <div class="check__sub">Brand colours, typography, shared components, and a separate look for
+                            working screens</div>
                     </div>
                 </div>
                 <div class="check">
-                    <svg class="check__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="m8 12 3 3 5-6" />
+                    <svg class="check__icon" aria-hidden="true">
+                        <use href="#i-tick" />
                     </svg>
                     <div class="check__body">
                         <div class="check__title">Base dashboard structure</div>
-                        <div class="check__sub">Role-aware application shell, sidebar, topbar, mobile tab bar</div>
+                        <div class="check__sub">Role-aware shell, sidebar, top bar, and a tab bar on phones</div>
                     </div>
                 </div>
+            </div>
+
+            <h3 class="subgroup__title">Phase 2, user accounts and dashboards</h3>
+            <div class="checklist">
+                <div class="check">
+                    <svg class="check__icon" aria-hidden="true">
+                        <use href="#i-tick" />
+                    </svg>
+                    <div class="check__body">
+                        <div class="check__title">Administrator dashboard</div>
+                        <div class="check__sub">Platform counts, pending actions, activity log, engagement, and site
+                            insights</div>
+                    </div>
+                </div>
+                <div class="check">
+                    <svg class="check__icon" aria-hidden="true">
+                        <use href="#i-tick" />
+                    </svg>
+                    <div class="check__body">
+                        <div class="check__title">User profile management</div>
+                        <div class="check__sub">Members edit their own details, upload a photo, and set what they want
+                            guidance on</div>
+                    </div>
+                </div>
+                <div class="check">
+                    <svg class="check__icon" aria-hidden="true">
+                        <use href="#i-tick" />
+                    </svg>
+                    <div class="check__body">
+                        <div class="check__title">Role-based access</div>
+                        <div class="check__sub">Administrator, mentor, and mentee, with a person able to hold more than
+                            one</div>
+                    </div>
+                </div>
+                <div class="check">
+                    <svg class="check__icon" aria-hidden="true">
+                        <use href="#i-tick" />
+                    </svg>
+                    <div class="check__body">
+                        <div class="check__title">Dashboard refinement</div>
+                        <div class="check__sub">A different first screen for each role, so nobody has to hunt for their
+                            own work</div>
+                    </div>
+                </div>
+                <div class="check">
+                    <svg class="check__icon" aria-hidden="true">
+                        <use href="#i-tick" />
+                    </svg>
+                    <div class="check__body">
+                        <div class="check__title">Navigation system</div>
+                        <div class="check__sub">Sidebar and phone navigation ordered by what each role uses most</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subgroup__title">Phase 3, mentoring features</h3>
+            <div class="checklist">
+                <div class="check">
+                    <svg class="check__icon" aria-hidden="true">
+                        <use href="#i-tick" />
+                    </svg>
+                    <div class="check__body">
+                        <div class="check__title">Mentor and mentee pairing</div>
+                        <div class="check__sub">Assign, reassign, and end. One mentor holds many mentees, a mentee holds
+                            one mentor, and both are emailed</div>
+                    </div>
+                </div>
+                <div class="check">
+                    <svg class="check__icon" aria-hidden="true">
+                        <use href="#i-tick" />
+                    </svg>
+                    <div class="check__body">
+                        <div class="check__title">Meeting scheduling</div>
+                        <div class="check__sub">Online, phone, or in person. Moving a meeting emails both parties with
+                            the old time and the new one</div>
+                    </div>
+                </div>
+                <div class="check">
+                    <svg class="check__icon" aria-hidden="true">
+                        <use href="#i-tick" />
+                    </svg>
+                    <div class="check__body">
+                        <div class="check__title">Meeting history tracking</div>
+                        <div class="check__sub">Upcoming, past, and cancelled, with a meeting nobody closed out still
+                            surfacing rather than quietly disappearing</div>
+                    </div>
+                </div>
+                <div class="check">
+                    <svg class="check__icon" aria-hidden="true">
+                        <use href="#i-tick" />
+                    </svg>
+                    <div class="check__body">
+                        <div class="check__title">Notes and action items</div>
+                        <div class="check__sub">The mentor's record of the conversation, plus follow-ups either side can
+                            tick off</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="note">
+                <strong>One promise worth stating plainly.</strong> A mentor's notes are visible to that mentor and to
+                an administrator, and to nobody else. This is enforced inside the database itself, not by hiding a
+                panel, and it was tested on 13 August from a real mentee account before this section was written.
             </div>
         </section>
 
 
-        <!-- ============ Section: Beyond Phase 1 ============ -->
+        <!-- ============ 05 Beyond scope ============ -->
         <section class="section section--alt reveal" id="beyond" aria-labelledby="beyond-title">
             <div class="section__head">
-                <span class="section__eyebrow">05 &middot; Phase 2</span>
-                <h2 class="section__title" id="beyond-title">Phase 2 work in progress</h2>
-                <p class="section__lede">Items from Phase 2 already shipped, delivered at the same quality bar as Phase
-                    1.</p>
+                <span class="section__eyebrow">05 &middot; Beyond scope</span>
+                <h2 class="section__title" id="beyond-title">Built beyond the agreement</h2>
+                <p class="section__lede">None of the following appears in the Statement of Work. Each was built because
+                    the platform is better with it, at no change to the agreed fee.</p>
             </div>
 
             <ul class="beyond">
-                <li class="beyond__item"><strong>Complete marketing site.</strong> Six public pages and three legal
-                    pages, all responsive, all production-grade.</li>
-                <li class="beyond__item"><strong>Onboarding pack.</strong> Three-step intake (you / your role / online)
-                    with branded custom email verification via Resend.</li>
-                <li class="beyond__item"><strong>Mentor Dashboard.</strong> Stats row, next sessions, mentees list with
-                    status thresholds, open action items.</li>
-                <li class="beyond__item"><strong>Admin Console.</strong> Stats row, pending actions, activity log,
-                    engagement snapshot, site insights, plus four full pages (Users, Submissions, Activity, Insights).
-                </li>
-                <li class="beyond__item"><strong>Role lifecycle.</strong> Sign-up intent capture, admin approval flow,
-                    role-decision emails (approve mentor, confirm mentee, revoke mentor), audit log.</li>
-                <li class="beyond__item"><strong>Deactivation lockout.</strong> Admin flips active off, the user is
-                    signed out across all devices in realtime, the sign-in page surfaces the reason.</li>
-                <li class="beyond__item"><strong>Page analytics.</strong> Visitor counts, top paths, funnel, device
-                    breakdown. Zero third-party trackers.</li>
-                <li class="beyond__item"><strong>Audit log.</strong> Every admin action recorded with actor, target, and
-                    timestamp.</li>
-                <li class="beyond__item"><strong>Verse of the Week.</strong> Scripture band on the dashboard, edited
-                    from Supabase, hides past 14 days of staleness.</li>
+                <li class="beyond__item"><strong>Invitations.</strong> A personal link that carries the role you
+                    intended, so an invited mentor arrives as a mentor without you promoting them by hand.</li>
+                <li class="beyond__item"><strong>Guided onboarding.</strong> A three-step intake covering contact
+                    details, what someone wants guidance on, and where to find them online.</li>
+                <li class="beyond__item"><strong>Branded email verification.</strong> Confirmation email in your own
+                    livery rather than a generic system message.</li>
+                <li class="beyond__item"><strong>Role approval.</strong> Someone asks to mentor, an administrator
+                    approves or declines, and the person is told either way in a considerate email.</li>
+                <li class="beyond__item"><strong>Activity log.</strong> Every administrative action recorded with who
+                    did it, to whom, and when.</li>
+                <li class="beyond__item"><strong>Visitor insights.</strong> Page views, popular routes, and devices,
+                    measured without handing your visitors to a third party.</li>
+                <li class="beyond__item"><strong>Deactivation.</strong> Switch someone off and they are signed out
+                    everywhere within seconds, with their history untouched.</li>
+                <li class="beyond__item"><strong>Installable app.</strong> Members can add Toolvine to a phone home
+                    screen and open it like any other app.</li>
+                <li class="beyond__item"><strong>Four extra public pages.</strong> Team, Outreach, Partners, and Get
+                    involved, none of which were in the agreed seven.</li>
+                <li class="beyond__item"><strong>Community guidelines.</strong> A third legal page covering
+                    safeguarding, written because a mentoring platform needs one.</li>
+                <li class="beyond__item"><strong>Partners management.</strong> Add an organisation, upload its logo, and
+                    it appears on the public page.</li>
+                <li class="beyond__item"><strong>Verse of the week.</strong> A scripture band on the member dashboard,
+                    editable by you, that hides itself rather than going stale.</li>
             </ul>
         </section>
 
 
-        <!-- ============ Section: What's next ============ -->
-        <section class="section reveal" id="whats-next" aria-labelledby="next-title">
+        <!-- ============ 06 What remains ============ -->
+        <section class="section reveal" id="remaining" aria-labelledby="remaining-title">
             <div class="section__head">
-                <span class="section__eyebrow">06 &middot; Next</span>
-                <h2 class="section__title" id="next-title">The mentoring engine</h2>
-                <p class="section__lede">The remaining work to close the mentor's loop: pair, meet, record, follow up.
-                    This is the build the Second Payment funds.</p>
+                <span class="section__eyebrow">06 &middot; Remaining</span>
+                <h2 class="section__title" id="remaining-title">Phases four and five</h2>
+                <p class="section__lede">Phase 4 asked for the resource library, email notifications, public pages, and
+                    contact forms. Three of those four are already live and listed above. The library is the last of
+                    them, and then the work is testing and launch.</p>
             </div>
 
             <div class="next-grid">
                 <div class="next-card">
                     <div class="next-card__num">01</div>
-                    <div class="next-card__title">Pairings</div>
-                    <p class="next-card__text">Admin pairs a mentor with one or more mentees. One active pairing per
-                        mentee. History preserved.</p>
+                    <div class="next-card__title">Resource library</div>
+                    <p class="next-card__text">Six categories, uploaded by an administrator as a file, a link, or a
+                        video. Every member browses and searches, nobody else uploads.</p>
                 </div>
                 <div class="next-card">
                     <div class="next-card__num">02</div>
-                    <div class="next-card__title">Meetings flow</div>
-                    <p class="next-card__text">Schedule, mark complete, cancel. External link, phone, or in-person.
-                        Email notifications to both parties.</p>
+                    <div class="next-card__title">Your review</div>
+                    <p class="next-card__text">Walk the platform as an administrator, sign up as a member, and tell us
+                        what to change. This is the review named in the Statement of Work.</p>
                 </div>
                 <div class="next-card">
                     <div class="next-card__num">03</div>
-                    <div class="next-card__title">Notes editor</div>
-                    <p class="next-card__text">Mentor records what was discussed. Auto-saves on blur. Visible to mentor
-                        and admin only.</p>
+                    <div class="next-card__title">Testing and fixes</div>
+                    <p class="next-card__text">Your feedback applied, test records cleared out, real devices checked,
+                        and your first mentors invited onto a clean platform.</p>
                 </div>
                 <div class="next-card">
                     <div class="next-card__num">04</div>
-                    <div class="next-card__title">Action items</div>
-                    <p class="next-card__text">Concrete follow-ups attached to a meeting, surfaced to the mentee in
-                        their dashboard.</p>
+                    <div class="next-card__title">Launch</div>
+                    <p class="next-card__text">The platform opens to your community, and three months of included
+                        support begins the same day.</p>
                 </div>
+            </div>
+
+            <div class="note">
+                <strong>Where this sits against the timeline.</strong> The Statement of Work estimates eight to twelve
+                weeks from a 1 June start, which puts the outer edge at 24 August. We are inside that window with the
+                launch phase still ahead, and the amount of work delivered is well past what was agreed. Your review is
+                the thing that now sets the pace.
             </div>
         </section>
 
 
-        <!-- ============ Section: Payment ============ -->
+        <!-- ============ 07 Payment ============ -->
         <section class="section section--alt reveal" id="payment" aria-labelledby="payment-title">
             <div class="section__head">
                 <span class="section__eyebrow">07 &middot; Payment</span>
                 <h2 class="section__title" id="payment-title">Payment milestones</h2>
-                <p class="section__lede">Three milestones per the Statement of Work. Triggers are written in the SOW;
+                <p class="section__lede">Three milestones per the Statement of Work. The triggers are written there;
                     this surface reflects current state.</p>
             </div>
 
@@ -681,46 +829,45 @@
                     <div class="payment__marker"><span class="payment__num">1</span></div>
                     <div class="payment__body">
                         <div class="payment__head">
-                            <div class="payment__title">First Payment</div>
+                            <div class="payment__title">First payment</div>
                             <div class="payment__amount">&#8358;626,370</div>
                         </div>
                         <div class="payment__trigger">Trigger: to commence the project.</div>
-                        <div class="payment__status payment__status--paid"><svg viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="m5 12 5 5L20 7" />
-                            </svg> Received 28 May 2026. Project commenced.</div>
+                        <div class="payment__status payment__status--paid"><svg aria-hidden="true">
+                                <use href="#i-paid" />
+                            </svg> Received 28 May 2026. Project commenced 1 June.</div>
                     </div>
                 </li>
-                <li class="payment payment--due">
+                <li class="payment payment--paid">
                     <div class="payment__marker"><span class="payment__num">2</span></div>
                     <div class="payment__body">
                         <div class="payment__head">
-                            <div class="payment__title">Second Payment</div>
+                            <div class="payment__title">Second payment</div>
                             <div class="payment__amount">&#8358;425,000</div>
                         </div>
                         <div class="payment__trigger">Trigger: when core features are ready.</div>
-                        <div class="payment__status payment__status--due">Due. Core platform surfaces (auth, onboarding,
-                            dashboards, admin console, marketing, legal) are live. The mentoring engine build unlocks on
-                            receipt.</div>
+                        <div class="payment__status payment__status--paid"><svg aria-hidden="true">
+                                <use href="#i-paid" />
+                            </svg> Received 29 July 2026. The mentoring engine it funded is now built.</div>
                     </div>
                 </li>
                 <li class="payment payment--pending">
                     <div class="payment__marker"><span class="payment__num">3</span></div>
                     <div class="payment__body">
                         <div class="payment__head">
-                            <div class="payment__title">Final Payment</div>
+                            <div class="payment__title">Final payment</div>
                             <div class="payment__amount">&#8358;255,000</div>
                         </div>
                         <div class="payment__trigger">Trigger: before launch, after review and approval.</div>
-                        <div class="payment__status payment__status--pending">Scheduled at the close of the build, after
-                            your review.</div>
+                        <div class="payment__status payment__status--pending">Not yet due. It becomes due once you have
+                            reviewed the platform and approved it, which is step 02 in the section above.</div>
                     </div>
                 </li>
             </ol>
         </section>
 
 
-        <!-- ============ Section: Brand mark ============ -->
+        <!-- ============ 08 Brand ============ -->
         <section class="section reveal" id="brand" aria-labelledby="brand-title">
             <div class="section__head">
                 <span class="section__eyebrow">08 &middot; Brand</span>
@@ -733,170 +880,210 @@
                 <div class="need">
                     <div class="need__head">
                         <div class="need__title">Today</div>
-                        <div class="need__due">Working mark</div>
+                        <div class="need__due need__due--soft">Working mark</div>
                     </div>
-                    <p class="need__text">The two-leaf mark in use across the site is the working brand for v1. It
-                        carries the design system without blocking development on logo iterations.</p>
+                    <p class="need__text">The two-leaf mark across the site is the working brand. It carries the design
+                        system without holding development up on logo iterations.</p>
                 </div>
                 <div class="need">
                     <div class="need__head">
                         <div class="need__title">On every email</div>
-                        <div class="need__due">During testing</div>
+                        <div class="need__due need__due--info">During testing</div>
                     </div>
-                    <p class="need__text">Your official Toolvine Mentors and Leaders Initiative logo will appear on
-                        every transactional email (welcome, verification, password reset, role decision, meeting
-                        notifications) as we review the email surfaces together while you test the platform.</p>
+                    <p class="need__text">Your official Toolvine Mentors and Leaders Initiative logo goes onto every
+                        message the platform sends, welcome through meeting notification, as we review the email
+                        surfaces together during testing.</p>
                 </div>
                 <div class="need">
                     <div class="need__head">
                         <div class="need__title">On the website</div>
-                        <div class="need__due">Final delivery</div>
+                        <div class="need__due need__due--info">Final delivery</div>
                     </div>
-                    <p class="need__text">Your official logo will appear in defined sections of the marketing site at
-                        final delivery, with the working mark retained where it serves the design system.</p>
+                    <p class="need__text">Your official logo appears in defined sections of the public site at final
+                        delivery, with the working mark retained where it serves the design system.</p>
                 </div>
             </div>
         </section>
 
 
-        <!-- ============ Section: We need from you ============ -->
+        <!-- ============ 09 From your side ============ -->
         <section class="section reveal" id="from-you" aria-labelledby="from-you-title">
             <div class="section__head">
                 <span class="section__eyebrow">09 &middot; From your side</span>
                 <h2 class="section__title" id="from-you-title">What we still need from you</h2>
-                <p class="section__lede">Per the kickoff document, due by 30 June. None of these block Phase 1 sign-off;
-                    they populate the platform before launch.</p>
+                <p class="section__lede">None of these stop the build. They are what turns a working platform into your
+                    platform, and the first three are the ones that shape launch.</p>
             </div>
 
             <div class="needs">
                 <div class="need">
                     <div class="need__head">
-                        <div class="need__title">Team headshots</div>
-                        <div class="need__due">By 30 June</div>
+                        <div class="need__title">First mentors and mentees</div>
+                        <div class="need__due">Shapes launch</div>
                     </div>
-                    <p class="need__text">One photo per person on the About page. Phone photos against a plain wall are
-                        fine. For each: name, role, one-line bio.</p>
+                    <p class="need__text">Names, email addresses, and whether each person is joining to mentor or to be
+                        mentored. Invitations are ready to send the moment the list arrives.</p>
                 </div>
                 <div class="need">
                     <div class="need__head">
-                        <div class="need__title">Activity photos</div>
-                        <div class="need__due">By 30 June</div>
+                        <div class="need__title">Official logo files</div>
+                        <div class="need__due">Shapes launch</div>
                     </div>
-                    <p class="need__text">Five to ten from past mentoring events, group meetings, retreats. These go on
-                        Home and About.</p>
+                    <p class="need__text">The highest resolution version you hold, ideally the original design file. A
+                        clear photograph of print material is better than nothing.</p>
                 </div>
                 <div class="need">
                     <div class="need__head">
-                        <div class="need__title">Privacy and Terms review</div>
-                        <div class="need__due">By 30 June</div>
+                        <div class="need__title">Terms jurisdiction</div>
+                        <div class="need__due">Legal decision</div>
                     </div>
-                    <p class="need__text">Read through the drafts now live. Tell us what to change. We rewrite.</p>
+                    <p class="need__text">The Terms currently name the courts of Lagos State. The initiative is
+                        headquartered in Ibadan, Oyo State. This is your call, not ours, and it is a one-line change
+                        either way.</p>
                 </div>
                 <div class="need">
                     <div class="need__head">
-                        <div class="need__title">Founding cohort list</div>
-                        <div class="need__due">For the next build</div>
+                        <div class="need__title">Mission statement</div>
+                        <div class="need__due need__due--info">For the About page</div>
                     </div>
-                    <p class="need__text">Names and intended roles (mentor or mentee) for the first pairing batch.</p>
+                    <p class="need__text">Asked for on 29 July. The About page currently carries wording drafted by us,
+                        which we would rather replace with yours.</p>
+                </div>
+                <div class="need">
+                    <div class="need__head">
+                        <div class="need__title">Team photographs</div>
+                        <div class="need__due need__due--info">For the Team page</div>
+                    </div>
+                    <p class="need__text">Some have arrived, several have not. Anyone still missing appears as their
+                        initials, which works but is not what we want at launch. A phone photograph against a plain wall
+                        is fine.</p>
+                </div>
+                <div class="need">
+                    <div class="need__head">
+                        <div class="need__title">Activity photographs</div>
+                        <div class="need__due need__due--info">For Home and Outreach</div>
+                    </div>
+                    <p class="need__text">More from past meetings, retreats, and outreach. The Outreach page is running
+                        on the set you sent, and a wider selection would let us use them across Home and About too.</p>
+                </div>
+                <div class="need">
+                    <div class="need__head">
+                        <div class="need__title">Partner organisations</div>
+                        <div class="need__due need__due--soft">When ready</div>
+                    </div>
+                    <p class="need__text">Names and logos of organisations standing with you. Two sample rows sit on the
+                        Partners page until real ones replace them.</p>
                 </div>
                 <div class="need">
                     <div class="need__head">
                         <div class="need__title">Next Family Meeting</div>
-                        <div class="need__due">For the Home page</div>
+                        <div class="need__due need__due--soft">When set</div>
                     </div>
-                    <p class="need__text">Date, time, and mode of the upcoming meeting, to feature on the invitation
-                        surface.</p>
-                </div>
-                <div class="need">
-                    <div class="need__head">
-                        <div class="need__title">Official logo file</div>
-                        <div class="need__due">Before Phase 2 close</div>
-                    </div>
-                    <p class="need__text">High-resolution version of the Toolvine Mentors and Leaders Initiative logo
-                        (AI source, Canva file, or 2x PNG). Needed for the email surfaces and the defined marketing
-                        sections.</p>
+                    <p class="need__text">Date, time, and whether it is online or in person, for the invitation on the
+                        Home page.</p>
                 </div>
             </div>
         </section>
 
 
-        <!-- ============ Section: Recent updates ============ -->
+        <!-- ============ 10 Log ============ -->
         <section class="section section--alt reveal" id="updates" aria-labelledby="updates-title">
             <div class="section__head">
                 <span class="section__eyebrow">10 &middot; Log</span>
                 <h2 class="section__title" id="updates-title">Recent updates</h2>
-                <p class="section__lede">Most recent first. This is where you check back as the build moves.</p>
+                <p class="section__lede">Most recent first. This is where to check back as the build moves.</p>
             </div>
 
             <ol class="log">
                 <li class="log__entry">
                     <div class="log__body">
-                        <div class="log__title">Phase 1 delivered. Admin console finalised.</div>
-                        <p class="log__text">Mentor dashboard and admin console locked. Four admin pages live: Users
-                            with attention buckets and a user-detail drawer, Submissions with status filters, Activity
-                            audit log, Site Insights with visitor analytics. Phase 1 closed.</p>
+                        <div class="log__title">The mentoring engine is built.</div>
+                        <p class="log__text">Invitations, pairings, meetings, mentor notes, and action items, all tested
+                            end to end against real accounts. A mentor can now invite nobody by accident, pair nobody
+                            twice, and lose nothing when a meeting moves. The privacy of mentor notes was tested from a
+                            real mentee account and holds at the database.</p>
                     </div>
                 </li>
                 <li class="log__entry">
                     <div class="log__body">
-                        <div class="log__title">Admin Users page and role-decision emails.</div>
-                        <p class="log__text">Profile editing shipped. Mentee dashboard with mentor-relation card. Verse
-                            of the Week added. Admin Users page with filters, role approval and revoke flows, branded
-                            role-decision emails.</p>
+                        <div class="log__title">Partners, donations, and the team page.</div>
+                        <p class="log__text">Partners built end to end with logo upload and a public page. Get involved
+                            gained a donation path. The team page rebuilt around the board of five, six teams, and
+                            administration, so a person serving twice appears once.</p>
                     </div>
                 </li>
                 <li class="log__entry">
                     <div class="log__body">
-                        <div class="log__title">Onboarding pack and custom email verification.</div>
-                        <p class="log__text">Three-step onboarding form (you, your role, online), single atomic submit.
-                            Custom email verification via Resend with branded templates. Welcome email fires
-                            post-onboarding. Route refactor to flat URLs under a single app shell. Mobile bottom tab
-                            bar.</p>
+                        <div class="log__title">Second review received and applied.</div>
+                        <p class="log__text">Your 29 July notes worked through alongside the Second Payment. Programs
+                            reframed around the four programs you actually run. About gained its mission and vision
+                            section.</p>
                     </div>
                 </li>
                 <li class="log__entry">
                     <div class="log__body">
-                        <div class="log__title">Authentication surface sealed.</div>
-                        <p class="log__text">Sign in, sign up, password reset, magic link, callback. Six branded
-                            Supabase email templates (confirm signup, invite user, magic link, change email, password
-                            reset, reauthentication).</p>
+                        <div class="log__title">First review applied. Three new pages.</div>
+                        <p class="log__text">Polish across the site from your 20 July notes, plus Get involved, Team,
+                            and Outreach added as new public pages. The name settled to Toolvine in one casing
+                            throughout.</p>
                     </div>
                 </li>
                 <li class="log__entry">
                     <div class="log__body">
-                        <div class="log__title">About page restructured for conversion.</div>
-                        <p class="log__text">Org-chart layout replaced with community-invitation flow: conviction hero,
-                            atmospheric Voices section, founder, Vinethoughts as proof-of-life, compact team masthead,
-                            dated Family Meeting invitation.</p>
+                        <div class="log__title">This status page, and an installable app.</div>
+                        <p class="log__text">The page you are reading, published on its own address. Members can now add
+                            Toolvine to a phone home screen and open it like a normal app.</p>
+                    </div>
+                </li>
+                <li class="log__entry">
+                    <div class="log__body">
+                        <div class="log__title">Administrator console finished.</div>
+                        <p class="log__text">Four console pages live: members with attention groupings and a detail
+                            panel, submissions with statuses, the activity log, and site insights.</p>
+                    </div>
+                </li>
+                <li class="log__entry">
+                    <div class="log__body">
+                        <div class="log__title">Members page and role decisions.</div>
+                        <p class="log__text">Profile editing shipped. The mentee dashboard gained its mentor card.
+                            Administrators can approve or revoke a mentor role, and the person is emailed either way.
+                        </p>
+                    </div>
+                </li>
+                <li class="log__entry">
+                    <div class="log__body">
+                        <div class="log__title">Onboarding and email verification.</div>
+                        <p class="log__text">A three-step intake with a single save at the end, and branded email
+                            confirmation replacing the generic system message. Welcome email follows onboarding.</p>
+                    </div>
+                </li>
+                <li class="log__entry">
+                    <div class="log__body">
+                        <div class="log__title">Authentication sealed.</div>
+                        <p class="log__text">Sign in, sign up, password reset, sign-in links, and the return path from
+                            an email. Six system email templates rebuilt in your livery.</p>
                     </div>
                 </li>
                 <li class="log__entry">
                     <div class="log__body">
                         <div class="log__title">Marketing site complete. Legal pages live.</div>
-                        <p class="log__text">Programs, How it Works, Resources, Contact pages shipped. Three legal pages
-                            drafted: Privacy (NDPA and GDPR), Terms (13 sections), Community Guidelines (safeguarding
-                            posture). Shared layout with sticky table of contents.</p>
+                        <p class="log__text">Programs, How it works, Resources, and Contact shipped. Three legal pages
+                            drafted: Privacy, Terms, and Community guidelines, on a shared layout with a sticky contents
+                            rail.</p>
                     </div>
                 </li>
                 <li class="log__entry">
                     <div class="log__body">
-                        <div class="log__title">Homepage visual audit complete.</div>
-                        <p class="log__text">All eight homepage sections shipped: hero with ambient light canvas,
-                            conviction, practices, community with Vinethoughts mini cover, pause, two-paths interactive,
-                            wall of witness, cinematic close.</p>
-                    </div>
-                </li>
-                <li class="log__entry">
-                    <div class="log__body">
-                        <div class="log__title">Project kickoff.</div>
-                        <p class="log__text">Domain registered. Vercel, Supabase, Cloudflare, Resend, and Zoho Mail
-                            provisioned. Brand mark applied. Auth scaffolding stood up.</p>
+                        <div class="log__title">Home page finished.</div>
+                        <p class="log__text">Eight sections, from the opening conviction through the two-paths
+                            interactive and the wall of witness to the closing invitation.</p>
                     </div>
                 </li>
                 <li class="log__entry">
                     <div class="log__body">
                         <div class="log__title">Project commencement.</div>
-                        <p class="log__text">Statement of Work signed. First Payment received. Kickoff scheduled.</p>
+                        <p class="log__text">Statement of Work signed and First Payment received. Domain registered.
+                            Hosting, database, email, and DNS all provisioned in your name.</p>
                     </div>
                 </li>
             </ol>
@@ -915,16 +1102,17 @@
                 </span>
                 <div class="footer__brand-text">
                     <div class="footer__brand-name">BA CourtHouse</div>
-                    <div class="footer__brand-sub">Project delivery for ToolVine Mentors Initiative</div>
+                    <div class="footer__brand-sub">Project delivery for Toolvine Mentors and Leaders Initiative</div>
                 </div>
             </div>
             <div class="footer__contact">
                 <div class="footer__contact-name">Vincent Onu</div>
-                <div class="footer__contact-role">Founder &amp; Lead Consultant</div>
+                <div class="footer__contact-role">Founder and Lead Consultant</div>
             </div>
             <div class="footer__meta">
-                <div class="footer__meta-line">Status page version 1.0</div>
-                <div class="footer__meta-line">Last published <time>16 June 2026</time></div>
+                <div class="footer__meta-line">Status page version 2.0</div>
+                <div class="footer__meta-line js-relative">Last published <time
+                        datetime="2026-08-13T18:00:00+01:00">13 August 2026</time></div>
             </div>
         </div>
         <div class="footer__bar"></div>
