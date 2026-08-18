@@ -130,7 +130,7 @@
                         <div class="hero__meta-cell">
                             <div class="hero__meta-label">Updated</div>
                             <div class="hero__meta-value js-relative">
-                                <time datetime="2026-08-16T21:00:00+01:00">16 August 2026</time>
+                                <time datetime="2026-08-18T09:00:00+01:00">18 August 2026</time>
                             </div>
                         </div>
                     </div>
@@ -157,7 +157,7 @@
                     </svg>
                     <div class="quicklink__body">
                         <div class="quicklink__title">Sign in as administrator</div>
-                        <div class="quicklink__sub">Zoho mail and the password reset path</div>
+                        <div class="quicklink__sub">Your mailbox and the password reset path</div>
                     </div>
                 </a>
                 <a class="quicklink" href="#remaining">
@@ -253,8 +253,8 @@
                     </div>
                     <div class="card__url"><a href="https://toolvinementors.com/team" target="_blank"
                             rel="noopener">toolvinementors.com/team</a></div>
-                    <p class="card__desc">The founder, the board of five, six team leads, administration, and the mentor
-                        roster. People who serve twice appear once.</p>
+                    <p class="card__desc">The founder, the board of five, the seven teams and their leads, and
+                        administration. People who serve twice appear once.</p>
                 </article>
                 <article class="card">
                     <div class="card__head">
@@ -434,7 +434,7 @@
                 <span class="section__eyebrow">02 &middot; Access</span>
                 <h2 class="section__title" id="access-title">Signing in as administrator</h2>
                 <p class="section__lede">The account <code>admin@toolvinementors.com</code> is created and active.
-                    Vincent shares the Zoho mailbox credentials directly. Once you can read mail at that address, the
+                    Vincent shares the mailbox credentials directly. Once you can read mail at that address, the
                     platform sign-in is a single password reset.</p>
             </div>
 
@@ -442,12 +442,12 @@
                 <li class="step">
                     <div class="step__num">1</div>
                     <div class="step__body">
-                        <div class="step__title">Open the Zoho mailbox</div>
-                        <p class="step__text">The credentials go to the founder's Gmail address. Sign in to Zoho Mail
-                            and you are prompted to set your own password on first login.</p>
-                        <a class="step__action" href="https://www.zoho.com/mail/login.html" target="_blank"
+                        <div class="step__title">Open the mailbox</div>
+                        <p class="step__text">The credentials go to the founder's Gmail address. Sign in to webmail,
+                            then change the password to one of your own under Password and Security.</p>
+                        <a class="step__action" href="https://mail.toolvinementors.com/webmail" target="_blank"
                             rel="noopener">
-                            Open Zoho Mail
+                            Open webmail
                             <svg aria-hidden="true">
                                 <use href="#i-out" />
                             </svg>
@@ -474,7 +474,7 @@
                     <div class="step__body">
                         <div class="step__title">Enter <code>admin@toolvinementors.com</code></div>
                         <p class="step__text">Submit the form. A reset link is sent to that address, and it lands in the
-                            Zoho inbox you just opened.</p>
+                            inbox you just opened.</p>
                     </div>
                 </li>
                 <li class="step">
@@ -500,8 +500,8 @@
             <div class="section__head">
                 <span class="section__eyebrow">03 &middot; Email</span>
                 <h2 class="section__title" id="email-title">Email infrastructure</h2>
-                <p class="section__lede">Five branded addresses live on Zoho Mail. Four are aliases routing into the
-                    primary inbox, so there is only one place to check.</p>
+                <p class="section__lede">Mail now runs on the initiative's own hosting rather than a rented mailbox
+                    service. Three shared inboxes, two forwarding addresses, and a personal address for every mentor.</p>
             </div>
 
             <div class="email-table">
@@ -515,7 +515,7 @@
                             data-url="admin@toolvinementors.com" aria-label="Copy the admin address"><svg
                                 aria-hidden="true">
                                 <use href="#i-copy" /></svg></button></div>
-                    <div>Primary administrator inbox, root mailbox</div>
+                    <div>Board and platform administration</div>
                     <div><span class="tag tag--primary">Primary</span></div>
                 </div>
                 <div class="email-row">
@@ -524,7 +524,7 @@
                                 aria-hidden="true">
                                 <use href="#i-copy" /></svg></button></div>
                     <div>General community contact, and where replies to platform email arrive</div>
-                    <div><span class="tag tag--alias">Forwards to admin</span></div>
+                    <div><span class="tag tag--primary">Own inbox</span></div>
                 </div>
                 <div class="email-row">
                     <div class="email-addr"><code>privacy@toolvinementors.com</code><button class="email-copy js-copy"
@@ -548,7 +548,7 @@
                                 aria-hidden="true">
                                 <use href="#i-copy" /></svg></button></div>
                     <div>Member support, technical questions</div>
-                    <div><span class="tag tag--alias">Forwards to admin</span></div>
+                    <div><span class="tag tag--primary">Own inbox</span></div>
                 </div>
                 <div class="email-row email-row--system">
                     <div class="email-addr"><code>notify@relay.toolvinementors.com</code><button
@@ -561,10 +561,24 @@
             </div>
 
             <div class="note">
-                <strong>Replies now land somewhere.</strong> Platform email is sent from a dedicated subdomain that
-                cannot receive mail, which is normal practice and keeps your main domain's reputation clean. Every
-                message now carries <code>hello@toolvinementors.com</code> as its reply address, so a mentee who answers
-                a meeting notification reaches your inbox rather than a bounce.
+                <strong>Every mentor now has an address on your own domain.</strong> Twenty-five of them, in the form
+                first name dot surname at toolvinementors.com, so a mentor writing to a mentee writes as Toolvine rather
+                than from a personal account. They are not listed here, because this page is public and a list of
+                addresses is exactly what a spammer harvests. Each person receives their own address and password
+                privately, along with how to sign in.
+            </div>
+
+            <div class="note">
+                <strong>Where to read it.</strong> Webmail is at
+                <code>mail.toolvinementors.com/webmail</code>. Anyone can change their own password there once they are
+                signed in, under Password and Security, and everyone should.
+            </div>
+
+            <div class="note">
+                <strong>Replies land somewhere.</strong> Platform email is sent from a dedicated subdomain that cannot
+                receive mail, which is normal practice and keeps your main domain's reputation clean. Every message
+                carries <code>hello@toolvinementors.com</code> as its reply address, so a mentee who answers a meeting
+                notification reaches your inbox rather than a bounce.
             </div>
         </section>
 
@@ -605,7 +619,7 @@
                     </svg>
                     <div class="check__body">
                         <div class="check__title">Email infrastructure setup</div>
-                        <div class="check__sub">Zoho mailbox, four aliases, and a verified transactional sender</div>
+                        <div class="check__sub">Shared mailboxes, a personal address for every mentor, and a verified transactional sender</div>
                     </div>
                 </div>
                 <div class="check">
@@ -959,8 +973,8 @@
             <div class="section__head">
                 <span class="section__eyebrow">08 &middot; Brand</span>
                 <h2 class="section__title" id="brand-title">About the brand mark</h2>
-                <p class="section__lede">Your logo is now live. This is what carries it today, and the one file
-                    that would let it carry everything else.</p>
+                <p class="section__lede">Your logo is now live everywhere it belongs. This is where it sits, and
+                    what stays alongside it.</p>
             </div>
 
             <div class="needs">
@@ -976,22 +990,21 @@
                 </div>
                 <div class="need">
                     <div class="need__head">
-                        <div class="need__title">The original design file</div>
-                        <div class="need__due">Still needed</div>
+                        <div class="need__title">The home screen and the browser tab</div>
+                        <div class="need__due need__due--info">Your logo</div>
                     </div>
-                    <p class="need__text">What is live was traced from a photograph rather than from artwork. It holds
-                        at the sizes it is used at and will not hold on anything large, so the link preview that shows
-                        when the site is shared on WhatsApp, and anything printed, still wait on the original. An AI,
-                        EPS, or PDF file from whoever designed it is what we need.</p>
+                    <p class="need__text">The app icon, the browser tab icon, and the screen that shows while the app
+                        opens all carry your shield. If you installed the app before 17 August you will still see the
+                        old icon, because a phone keeps it. Remove it from your home screen and add it again.</p>
                 </div>
                 <div class="need">
                     <div class="need__head">
-                        <div class="need__title">The two-leaf mark</div>
-                        <div class="need__due need__due--soft">Still in use</div>
+                        <div class="need__title">Sharing the link</div>
+                        <div class="need__due need__due--info">Your logo</div>
                     </div>
-                    <p class="need__text">The mark we designed during the build stays as the app icon, the browser tab
-                        icon, and in a few places inside the platform where a small square is needed. Both can coexist,
-                        and we can retire ours entirely once the original file arrives.</p>
+                    <p class="need__text">The preview card that appears when the site is shared on WhatsApp now carries
+                        your logo and your tagline. If you shared the link before 17 August, WhatsApp holds the old
+                        picture for a while and will catch up on its own.</p>
                 </div>
             </div>
         </section>
@@ -1003,26 +1016,18 @@
                 <span class="section__eyebrow">09 &middot; From your side</span>
                 <h2 class="section__title" id="from-you-title">What we still need from you</h2>
                 <p class="section__lede">None of these stop the build. They are what turns a working platform into your
-                    platform, and the first three are the ones that shape launch.</p>
+                    platform. Fewer than there were, and the first two are the ones that shape launch.</p>
             </div>
 
             <div class="needs">
                 <div class="need">
                     <div class="need__head">
-                        <div class="need__title">First mentors and mentees</div>
+                        <div class="need__title">Your first mentees</div>
                         <div class="need__due">Shapes launch</div>
                     </div>
-                    <p class="need__text">Names, email addresses, and whether each person is joining to mentor or to be
-                        mentored. Invitations are ready to send the moment the list arrives.</p>
-                </div>
-                <div class="need">
-                    <div class="need__head">
-                        <div class="need__title">The original logo file</div>
-                        <div class="need__due need__due--info">For large formats</div>
-                    </div>
-                    <p class="need__text">The image you sent is live across the site and the emails. What still waits on
-                        the original is anything large: the preview card that appears when the site is shared on
-                        WhatsApp, and anything printed. An AI, EPS, or PDF from whoever designed it.</p>
+                    <p class="need__text">The twenty-five mentors from your list are ready to invite. What we do not yet
+                        have is the other half: who is joining to be mentored. Names and email addresses, and
+                        invitations go out the same day.</p>
                 </div>
                 <div class="need">
                     <div class="need__head">
@@ -1088,6 +1093,20 @@
             </div>
 
             <ol class="log">
+                <li class="log__entry">
+                    <div class="log__body">
+                        <div class="log__title">Your own email, and the corrections you sent.</div>
+                        <p class="log__text">Every mentor now has an address on your own domain rather than a personal
+                            one, so a mentor writing to a mentee writes as Toolvine. Section 03 explains where to read
+                            it. Each person gets their own address and password privately.
+                            Your latest corrections are in: the seventh team and its lead, the change of lead on
+                            Programs and Publicity, the corrected titles, and Mentor Adedayo's photograph, which
+                            replaces her initials. The mentor roster has come off the Team page as you asked.
+                            You asked for the pairing and meeting figures to come down because they were not accurate.
+                            They have, and we checked the rest of the site rather than only the page you named, so
+                            every remaining number is one we can stand behind.</p>
+                    </div>
+                </li>
                 <li class="log__entry">
                     <div class="log__body">
                         <div class="log__title">Your logo is on the site, and the site is open.</div>
