@@ -258,7 +258,11 @@ code { font-family: var(--font-mono); font-size: .92em; }
     margin-top: clamp(32px, 5vw, 48px);
     display: grid; grid-template-columns: 1fr; gap: 12px;
 }
-@media (min-width: 720px) { .quicklinks { grid-template-columns: repeat(3, 1fr); gap: 14px; } }
+/* Auto-fit rather than a fixed three, so a fourth link does not sit alone on
+   a row of its own. Two across on a tablet, four on a wide screen. */
+@media (min-width: 720px) {
+    .quicklinks { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+}
 
 .quicklink {
     background: var(--white);
@@ -919,6 +923,79 @@ code { font-family: var(--font-mono); font-size: .92em; }
     margin-bottom: 6px;
 }
 .log__text { font-size: 13px; color: var(--slate); line-height: 1.6; }
+
+/* Eighteen entries in reverse order is an archive, not an update. Three stay
+   open and the rest sit behind one press, titles only. */
+.log__more {
+    margin-left: 36px;
+}
+.log__more-summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 40px;
+    padding: 0 14px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--slate);
+    cursor: pointer;
+    list-style: none;
+    transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.log__more-summary::-webkit-details-marker { display: none; }
+.log__more-summary:hover { border-color: var(--ba-blue); color: var(--dark-slate); }
+.log__more-summary:focus-visible { outline: 2px solid var(--ba-blue); outline-offset: 2px; }
+
+.log__more-count {
+    font-family: var(--font-mono, monospace);
+    font-size: 11px;
+    color: var(--slate);
+    opacity: .7;
+}
+.log__more[open] .log__more-summary { margin-bottom: 12px; }
+
+.log__rows {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid var(--border);
+}
+.log__row {
+    padding: 8px 0 8px 18px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--slate);
+}
+.log__row + .log__row { border-top: 1px solid var(--border); }
+
+/* ============ Folded sections ============ */
+
+/* Reference material stays on the page and off the scan path. Same press as
+   the log, so there is one thing to learn rather than two. */
+.fold__summary {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 0 14px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--slate);
+    cursor: pointer;
+    list-style: none;
+    transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.fold__summary::-webkit-details-marker { display: none; }
+.fold__summary:hover { border-color: var(--ba-blue); color: var(--dark-slate); }
+.fold__summary:focus-visible { outline: 2px solid var(--ba-blue); outline-offset: 2px; }
+.fold[open] .fold__summary { margin-bottom: 18px; }
 
 
 /* ============ Footer ============ */
